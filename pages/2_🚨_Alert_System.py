@@ -87,6 +87,11 @@ st.markdown("""
         animation: alert-critical-pulse 2s infinite;
         position: relative;
         overflow: hidden;
+        color: #000000;
+    }
+    
+    .alert-critical h3, .alert-critical h4, .alert-critical p, .alert-critical span {
+        color: #000000;
     }
     
     .alert-critical::before {
@@ -117,6 +122,11 @@ st.markdown("""
         margin: 1rem 0;
         box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
         position: relative;
+        color: #000000;
+    }
+    
+    .alert-high h3, .alert-high h4, .alert-high p, .alert-high span {
+        color: #000000;
     }
     
     .alert-high::before {
@@ -135,6 +145,11 @@ st.markdown("""
         margin: 1rem 0;
         box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
         position: relative;
+        color: #000000;
+    }
+    
+    .alert-medium h3, .alert-medium h4, .alert-medium p, .alert-medium span {
+        color: #000000;
     }
     
     .alert-medium::before {
@@ -153,6 +168,11 @@ st.markdown("""
         margin: 1rem 0;
         box-shadow: 0 4px 15px rgba(22, 163, 74, 0.3);
         position: relative;
+        color: #000000;
+    }
+    
+    .alert-low h3, .alert-low h4, .alert-low p, .alert-low span {
+        color: #000000;
     }
     
     .alert-low::before {
@@ -340,6 +360,19 @@ st.markdown("""
         font-size: 0.9rem;
         letter-spacing: 1px;
         text-transform: uppercase;
+    }
+    
+    /* Ensure all inputs and text have black color */
+    .stTextInput > div > div > input {
+        color: #000000 !important;
+    }
+    
+    .stTextArea > div > div > textarea {
+        color: #000000 !important;
+    }
+    
+    .stSelectbox > div > div > div {
+        color: #000000 !important;
     }
 </style>
 """, unsafe_allow_html=True)

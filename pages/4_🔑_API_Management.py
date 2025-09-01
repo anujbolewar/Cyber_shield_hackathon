@@ -288,6 +288,11 @@ st.markdown("""
         border-radius: 12px;
         padding: 1.5rem;
         margin: 1rem 0;
+        color: #000000;
+    }
+    
+    .setup-guide h3, .setup-guide h4, .setup-guide p, .setup-guide span, .setup-guide li {
+        color: #000000;
     }
     
     .setup-step {
@@ -296,6 +301,11 @@ st.markdown("""
         padding: 1rem;
         margin: 0.5rem 0;
         border-left: 4px solid var(--police-blue);
+        color: #000000;
+    }
+    
+    .setup-step h3, .setup-step h4, .setup-step p, .setup-step span, .setup-step strong {
+        color: #000000;
     }
     
     /* Enhanced Test Button Styling */
@@ -404,6 +414,19 @@ st.markdown("""
         0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4); }
         50% { box-shadow: 0 0 0 8px rgba(245, 158, 11, 0.1); }
         100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
+    }
+    
+    /* Ensure all inputs and text have black color */
+    .stTextInput > div > div > input {
+        color: #000000 !important;
+    }
+    
+    .stTextArea > div > div > textarea {
+        color: #000000 !important;
+    }
+    
+    .stSelectbox > div > div > div {
+        color: #000000 !important;
     }
 </style>
 """, unsafe_allow_html=True)

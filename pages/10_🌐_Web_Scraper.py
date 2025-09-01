@@ -87,6 +87,11 @@ st.markdown("""
         margin: 1rem 0;
         box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         transition: all 0.3s ease;
+        color: #000000;
+    }
+    
+    .scraper-card h3, .scraper-card h4, .scraper-card p, .scraper-card span, .scraper-card label {
+        color: #000000;
     }
     
     .scraper-card:hover {
@@ -103,6 +108,11 @@ st.markdown("""
         margin: 0.5rem 0;
         cursor: pointer;
         transition: all 0.3s ease;
+        color: #000000;
+    }
+    
+    .scrape-type-card h3, .scrape-type-card h4, .scrape-type-card p, .scrape-type-card span {
+        color: #000000;
     }
     
     .scrape-type-card:hover {
@@ -124,6 +134,11 @@ st.markdown("""
         border-radius: 8px;
         padding: 1rem;
         margin: 1rem 0;
+        color: #000000;
+    }
+    
+    .scraping-progress h3, .scraping-progress h4, .scraping-progress p, .scraping-progress span {
+        color: #000000;
     }
     
     /* Results styling */
@@ -133,6 +148,11 @@ st.markdown("""
         border-radius: 8px;
         padding: 1rem;
         margin: 0.5rem 0;
+        color: #000000;
+    }
+    
+    .scrape-result h3, .scrape-result h4, .scrape-result p, .scrape-result span {
+        color: #000000;
     }
     
     /* Data field checkboxes */
@@ -143,6 +163,25 @@ st.markdown("""
         margin: 0.25rem 0;
         background: rgba(255, 255, 255, 0.8);
         border-radius: 6px;
+        color: #000000;
+    }
+    
+    .data-field-option label, .data-field-option span {
+        color: #000000;
+    }
+    
+    /* Ensure all inputs and text have black color */
+    .stTextInput > div > div > input {
+        color: #000000 !important;
+    }
+    
+    .stTextArea > div > div > textarea {
+        color: #000000 !important;
+    }
+    
+    .stSelectbox > div > div > div {
+        color: #000000 !important;
+    }
         border: 1px solid #e2e8f0;
     }
     
