@@ -252,16 +252,31 @@ class WebScraper:
     
     def validate_url(self, url: str) -> bool:
         """Validate URL format"""
-        return validators.url(url)
+        try:
+            return validators.url(url)
+        except Exception:
+            return False
     
     def get_page_content(self, url: str, timeout: int = 10) -> Optional[BeautifulSoup]:
         """Fetch and parse page content"""
         try:
-            response = self.session.get(url, timeout=timeout)
+            response = self.session.get(url, timeout=timeout, allow_redirects=True)
             response.raise_for_status()
-            return BeautifulSoup(response.content, 'html.parser')
+            
+            # Handle different content types
+            content_type = response.headers.get('content-type', '').lower()
+            
+            if 'html' in content_type or 'xml' in content_type:
+                return BeautifulSoup(response.content, 'html.parser')
+            else:
+                st.warning(f"Non-HTML content detected: {content_type}")
+                return None
+                
+        except requests.exceptions.RequestException as e:
+            st.error(f"Request error for {url}: {str(e)}")
+            return None
         except Exception as e:
-            st.error(f"Error fetching {url}: {str(e)}")
+            st.error(f"Error parsing {url}: {str(e)}")
             return None
     
     def extract_news_article(self, soup: BeautifulSoup, url: str, data_fields: List[str]) -> ScrapedData:
@@ -438,29 +453,39 @@ class WebScraper:
                 
                 soup = self.get_page_content(current_url)
                 if not soup:
+                    st.warning(f"Could not fetch page {page_num + 1}")
                     continue
                 
                 # Extract data based on scrape type
-                if custom_selectors:
-                    scraped_data = self.extract_custom_selectors(soup, current_url, custom_selectors)
-                elif scrape_type == "News Articles":
-                    scraped_data = self.extract_news_article(soup, current_url, data_fields)
-                elif scrape_type == "Social Media Posts":
-                    scraped_data = self.extract_social_media_post(soup, current_url, data_fields)
-                elif scrape_type == "Forum Discussions":
-                    scraped_data = self.extract_forum_discussion(soup, current_url, data_fields)
-                else:
-                    scraped_data = self.extract_news_article(soup, current_url, data_fields)  # Default
+                try:
+                    if custom_selectors:
+                        scraped_data = self.extract_custom_selectors(soup, current_url, custom_selectors)
+                    elif scrape_type == "News Articles":
+                        scraped_data = self.extract_news_article(soup, current_url, data_fields)
+                    elif scrape_type == "Social Media Posts":
+                        scraped_data = self.extract_social_media_post(soup, current_url, data_fields)
+                    elif scrape_type == "Forum Discussions":
+                        scraped_data = self.extract_forum_discussion(soup, current_url, data_fields)
+                    else:
+                        scraped_data = self.extract_news_article(soup, current_url, data_fields)  # Default
+                    
+                    if scraped_data.title or scraped_data.content:  # Only add if we got some data
+                        results.append(scraped_data)
+                        self.save_to_database(scraped_data, scrape_type)
+                        st.success(f"✅ Extracted data from page {page_num + 1}")
+                    else:
+                        st.info(f"ℹ️ No relevant data found on page {page_num + 1}")
                 
-                if scraped_data.title or scraped_data.content:  # Only add if we got some data
-                    results.append(scraped_data)
-                    self.save_to_database(scraped_data, scrape_type)
+                except Exception as e:
+                    st.warning(f"⚠️ Error extracting data from page {page_num + 1}: {str(e)}")
+                    continue
                 
                 # Small delay to be respectful
                 time.sleep(1)
                 
-                # Break if no pagination found
+                # Break if no pagination found (for multi-page scraping)
                 if page_num > 0 and not soup.find('a', href=re.compile(r'page|next')):
+                    st.info("No more pages found")
                     break
         
         except Exception as e:
@@ -521,14 +546,20 @@ def validate_url_input(url: str) -> tuple[bool, str]:
     if not url.startswith(('http://', 'https://')):
         url = 'https://' + url
     
-    if not validators.url(url):
+    try:
+        if not validators.url(url):
+            return False, "Invalid URL format"
+    except Exception:
         return False, "Invalid URL format"
     
     # Check for common problematic domains
-    parsed = urlparse(url)
-    blocked_domains = ['localhost', '127.0.0.1', '0.0.0.0']
-    if parsed.hostname in blocked_domains:
-        return False, "Cannot scrape local domains"
+    try:
+        parsed = urlparse(url)
+        blocked_domains = ['localhost', '127.0.0.1', '0.0.0.0']
+        if parsed.hostname in blocked_domains:
+            return False, "Cannot scrape local domains"
+    except Exception:
+        return False, "Invalid URL format"
     
     return True, url
 
