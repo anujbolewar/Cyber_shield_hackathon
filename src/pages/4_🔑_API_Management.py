@@ -94,6 +94,17 @@ if not DEMO_KEYS_AVAILABLE:
                 "No real API calls made",
                 "All features available for demonstration"
             ],
+            "instructions": [
+                "Demo keys are pre-configured for testing",
+                "No registration required",
+                "All features work in simulation mode"
+            ],
+            "limitations": [
+                "No real data is fetched",
+                "API calls return simulated responses",
+                "For demonstration purposes only"
+            ],
+            "security_notice": "Demo mode is safe for testing and presentations.",
             "platforms": {
                 "OpenAI": {"name": "OpenAI GPT", "demo_key": "demo_openai_key_123"},
                 "Twitter": {"name": "Twitter/X API", "demo_key": "demo_twitter_key_123"},
