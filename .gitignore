@@ -1,0 +1,242 @@
+# 🚔 Police AI Monitor - Git Ignore Rules
+# Professional .gitignore for deployment and version control
+
+# ===== DOCUMENTATION FILES (EXCLUDE ALL EXCEPT README) =====
+*.md
+!README.md
+docs/
+tutorials/
+DEPLOYMENT_*.md
+PROJECT_*.md
+*_DOCUMENTATION.md
+*_GUIDE.md
+*_SUMMARY.md
+*_COMPLETION_*.md
+*_IMPLEMENTATION_*.md
+
+# ===== PYTHON CACHE & BYTECODE =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ===== VIRTUAL ENVIRONMENTS =====
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.conda/
+
+# ===== IDE & EDITOR FILES =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.spyderproject
+.spyproject
+.ropeproject
+
+# ===== OPERATING SYSTEM FILES =====
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ===== DATABASE FILES (KEEP ONLY DEMO) =====
+*.db
+!demo_*.db
+db_backups/
+*.sqlite
+*.sqlite3
+
+# ===== LOG FILES =====
+*.log
+logs/
+streamlit.log
+police_*.log
+*.audit
+
+# ===== TEMPORARY & CACHE FILES =====
+*.tmp
+*.temp
+*.bak
+*.backup
+.cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ===== API KEYS & SECRETS =====
+.env
+.env.local
+.env.production
+config/secrets.py
+*.key
+*.pem
+*.p12
+*.pfx
+api_keys.json
+secrets.json
+
+# ===== STREAMLIT SPECIFIC =====
+.streamlit/secrets.toml
+.streamlit/config.toml
+
+# ===== JUPYTER NOTEBOOKS =====
+.ipynb_checkpoints
+*.ipynb
+
+# ===== EVIDENCE & DATA FILES (PRODUCTION) =====
+evidence/*
+!evidence/demo_*
+legal_evidence/*
+!legal_evidence/demo_*
+test_evidence/
+test_results/
+
+# ===== DEVELOPMENT & TESTING FILES =====
+test_*.py
+*_test.py
+test_*.json
+test_*.csv
+test_*.txt
+test_*.xml
+fallback_system_test_report.json
+test_config.json
+
+# ===== DEMO & SAMPLE DATA (EXCLUDE FROM PRODUCTION) =====
+demo_*.py
+*_demo.py
+complete_*.py
+project_*.py
+fallback_system_summary.py
+twitter_monitoring_summary.py
+*_summary.py
+bot_network_analysis_*.json
+police_ai_demo_data_*.json
+
+# ===== BACKUP & ARCHIVE FILES =====
+*.zip
+*.tar.gz
+*.rar
+*.7z
+backup/
+backups/
+archive/
+
+# ===== DEPLOYMENT ARTIFACTS =====
+deployments/
+support_packages/
+FINAL_*.py
+POLICE_UTILITIES_*.py
+POLICE_VISUALIZATION_DOCUMENTATION.py
+
+# ===== LARGE MEDIA FILES =====
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.flv
+*.webm
+*.mkv
+
+# ===== COMPILED FILES =====
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# ===== PACKAGE MANAGERS =====
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ===== SECURITY AUDIT FILES =====
+police_security_audit.log
+security_*.log
+audit_*.log
+
+# ===== UTILITY LOG FILES =====
+police_utilities_*.log
+monitoring_*.log
+scraper_*.log
+
+# ===== LEGACY & OLD FILES =====
+old/
+legacy/
+deprecated/
+archive/
+*.old
+*.orig
+
+# ===== BUILD ARTIFACTS =====
+build/
+dist/
+*.spec
+
+# ===== KEEP THESE ESSENTIAL FILES =====
+# README.md (explicitly kept)
+# requirements.txt
+# main application files
+# src/ directory structure
+# config/ essential configs
+# deployment/ essential configs only
+
+# ===== DEVELOPMENT TOOLS =====
+.mypy_cache/
+.pytest_cache/
+.tox/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.hypothesis/
+
+# ===== VERSION CONTROL =====
+.git/
+.gitattributes
+
+# ===== CUSTOM PROJECT EXCLUSIONS =====
+# Exclude all summary and documentation Python files
+FINAL_POLICE_UTILITIES_SUMMARY.py
+project_final_summary.py
+project_overview.py
+database_setup.py
+
+# Exclude unnecessary JSON data files
+evidence_package_CASE_*.json
+police_ai_demo_data_*.json
+bot_network_analysis_*.json
+
+# ===== STREAMLIT LOGS =====
+streamlit.log

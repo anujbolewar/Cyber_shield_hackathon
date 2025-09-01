@@ -1,0 +1,47 @@
+# Streamlit configuration file
+
+[global]
+# Development mode - set to false for production
+developmentMode = false
+
+[server]
+# Server configuration
+port = 8501
+address = "localhost"
+
+# Enable CORS for cross-origin requests
+enableCORS = false
+
+# Enable XSS protection
+enableXsrfProtection = true
+
+# Max upload size (in MB)
+maxUploadSize = 200
+
+# Max message size (in MB)
+maxMessageSize = 200
+
+[browser]
+# Whether to automatically open the browser
+gatherUsageStats = false
+
+# Server address to display
+serverAddress = "localhost"
+
+# Port to display
+serverPort = 8501
+
+[theme]
+# Police Theme configuration
+primaryColor = "#1e3a8a"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f1f5f9"
+textColor = "#1e293b"
+font = "sans serif"
+
+[client]
+# Show error details
+showErrorDetails = true
+
+# Toolbar mode
+toolbarMode = "minimal"
