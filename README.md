@@ -67,37 +67,82 @@ police-ai-monitor/
 
 ## Screenshots
 
-### Login Screen
-*Secure authentication system requiring authorized law enforcement personnel credentials. The interface features a professional police-themed design with proper security protocols.*
+### Login & Authentication
+![Authentication](images/authentication.png)
+Secure authentication system requiring authorized law enforcement personnel credentials. Features professional police-themed design with proper security protocols and access control for authorized personnel only.
 
 ### Main Dashboard
-*Comprehensive overview of all monitoring activities including system metrics, active alerts, intelligence reports, and system health indicators. Quick action buttons allow rapid access to key functions.*
+![Dashboard](images/dashboard.png)
+Comprehensive overview of all monitoring activities including system metrics, active alerts, intelligence reports, and system health indicators. The dashboard provides quick action buttons for rapid access to key functions and real-time system status.
 
 ### Real-Time Intelligence Feed
-*Live monitoring interface showing social media posts with sentiment analysis, engagement metrics, and threat classification. The system tracks multiple platforms simultaneously and provides detailed analytics for each post.*
+![Real-Time Feed](images/real_time.png)
+Live monitoring interface showing social media posts with sentiment analysis, engagement metrics, and threat classification. The system tracks multiple platforms simultaneously and provides detailed analytics for each monitored post.
 
 ### Alert Management System
-*Advanced alert management showing active threats, alert trends over time, and critical notifications. The system provides real-time monitoring with customizable alert thresholds and response coordination tools.*
+![Alert System](images/alert_system.png)
+Advanced alert management showing active threats, alert trends over time, and critical notifications. The system provides real-time monitoring with customizable alert thresholds and automated response coordination tools.
 
 ### API Management Center
-*Comprehensive API configuration interface for managing external service connections. Features secure token management for social media platforms (Twitter/X, Facebook, Telegram, Reddit, YouTube), with encryption enabled and session-only storage. Includes demo mode for testing and quick setup guides for each platform.*
+![API Management](images/API_manneger.png)
+Comprehensive API configuration interface for managing external service connections. Features secure token management for social media platforms with encryption enabled and session-only storage for maximum security.
 
-### NLP Analysis Engine
-*Advanced Natural Language Processing engine with multi-language support, threat detection, and risk assessment capabilities. Provides AI-powered content analysis for threat detection and intelligence gathering with comprehensive analysis controls and history tracking.*
+![API Configuration](images/API_2.png)
+Advanced API setup and configuration options for multiple social media platforms including Twitter/X, Facebook, Telegram, Reddit, and YouTube with comprehensive connection testing and validation.
+
+### Advanced NLP Analysis Engine
+![NLP Analysis](images/advance_nlp.png)
+Advanced Natural Language Processing engine with multi-language support, threat detection, and risk assessment capabilities. Provides AI-powered content analysis for threat detection and intelligence gathering with comprehensive analysis controls.
 
 ### Data Visualization & Analytics
-*Comprehensive threat assessment dashboard featuring real-time threat level gauges, risk score distribution analysis, and advanced monitoring metrics for law enforcement operations.*
+![Visualization 1](images/visualization.png)
+Real-time threat assessment dashboard featuring interactive charts, threat level gauges, and comprehensive monitoring metrics designed specifically for law enforcement operations.
 
-### Geographic Threat Analysis
-*Interactive map showing geographic distribution of threats across India, with platform-specific analytics and keyword frequency analysis for better situational awareness.*
+![Visualization 2](images/visualization_1.png)
+Geographic threat analysis with interactive mapping showing threat distribution, platform-specific analytics, and keyword frequency analysis for enhanced situational awareness.
 
-### Network Analysis
-*Advanced network analysis showing account relationships and connection patterns. This helps identify bot networks, suspicious account clusters, and coordinated threat activities.*
+![Visualization 3](images/visualization_2.png)
+Advanced network analysis displaying account relationships, connection patterns, and bot detection algorithms to identify suspicious account clusters and coordinated threat activities.
 
-### Trend Analysis
-*Detailed trend analysis showing threat activity over time, content volume patterns, and bot activity detection to help predict and prevent potential security incidents.*
+![Visualization 4](images/visualization_3.png)
+Comprehensive trend analysis showing threat activity patterns over time, content volume analysis, and predictive modeling for proactive threat prevention and response planning.
 
-> **Note:** Screenshots will be added soon. The application is fully functional and can be tested by running `python run.py`.
+### Live Twitter Monitoring
+![Twitter Monitor](images/live_twiter_monitorning_system.png)
+Real-time Twitter/X monitoring system with live stream processing, keyword tracking, and automated threat detection for immediate response to emerging security concerns.
+
+![Twitter Analytics](images/live_twiter_monitorning_system_1.png)
+Advanced Twitter analytics dashboard showing engagement metrics, sentiment analysis, viral content tracking, and comprehensive social media intelligence gathering capabilities.
+
+### Database Management
+![Database](images/database.png)
+Comprehensive database management interface for storing, organizing, and retrieving intelligence data with secure backup systems, data export capabilities, and forensic-ready evidence preservation.
+
+### Evidence Management System
+![Evidence Management](images/Evidence_management_system.png)
+Professional evidence collection and management system designed for legal compliance, featuring digital signatures, chain of custody tracking, and court-ready evidence package generation.
+
+### Fallback System
+![Fallback System](images/Api_fallback_system.png)
+Robust fallback system ensuring continuous operation even during API outages or network issues, featuring cached data access, offline capabilities, and graceful degradation protocols.
+
+![Fallback Features](images/FallBack_system_features.png)
+Advanced fallback system features including data redundancy, automatic failover, cached intelligence feeds, and seamless transition between online and offline operational modes.
+
+### Web Scraper
+![Web Scraper](images/WebScrapper.png)
+Advanced web scraping engine for intelligence gathering from various online sources including news sites, forums, and social media platforms with configurable extraction rules and data validation.
+
+### Workflow Optimizer
+![Workflow Optimizer](images/workflow_optimizer.png)
+Intelligent workflow optimization system for streamlining law enforcement operations, featuring automated task management, resource allocation, and operational efficiency monitoring.
+
+### Custom Deployment Features
+![Custom Deployment](images/custom_deployment_features)
+Flexible deployment options supporting various infrastructure configurations, cloud platforms, and on-premises installations with scalable architecture and security compliance.
+
+![Network Deployment](images/custom_network_deployment)
+Advanced network deployment configurations for distributed law enforcement operations, supporting multi-location setups, secure communications, and centralized command and control.
 
 ## Demo Mode
 
