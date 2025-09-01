@@ -85,6 +85,18 @@ if not DEMO_KEYS_AVAILABLE:
         def get_demo_keys(self):
             return {}
         
+        def get_all_demo_keys(self):
+            """Get all available demo keys"""
+            return {
+                "OpenAI": "demo_openai_key_123",
+                "Twitter": "demo_twitter_key_123", 
+                "Facebook": "demo_facebook_key_123",
+                "Telegram": "demo_telegram_key_123",
+                "News API": "demo_news_key_123",
+                "Reddit": "demo_reddit_key_123",
+                "YouTube": "demo_youtube_key_123"
+            }
+        
         def is_demo_key(self, key):
             """Check if a key is a demo key"""
             if not key:
