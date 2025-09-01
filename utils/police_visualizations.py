@@ -281,8 +281,7 @@ class PoliceVisualizationEngine:
                     thickness=15,
                     len=0.7,
                     x=1.02,
-                    title="Risk Score",
-                    titlefont=dict(color=self.colors['text_light']),
+                    title=dict(text="Risk Score", font=dict(color=self.colors['text_light'])),
                     tickcolor=self.colors['text_light']
                 ),
                 line=dict(width=2, color=self.colors['police_blue'])
@@ -800,8 +799,7 @@ class PoliceVisualizationEngine:
                 sizemin=5,
                 line=dict(width=1, color=self.colors['police_blue']),
                 colorbar=dict(
-                    title="🤖 Bot Probability",
-                    titlefont=dict(color=self.colors['text_light']),
+                    title=dict(text="🤖 Bot Probability", font=dict(color=self.colors['text_light'])),
                     tickcolor=self.colors['text_light']
                 )
             ),
