@@ -202,6 +202,21 @@ def show_web_scraper():
     st.write("**URL to scrape:**")
     url = st.text_input("Enter website URL", "https://example.com")
     
+    # Simple URL validation
+    def is_valid_url(url):
+        try:
+            import re
+            pattern = re.compile(
+                r'^https?://'  # http:// or https://
+                r'(?:(?:[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?\.)+[A-Z]{2,6}\.?|'  # domain...
+                r'localhost|'  # localhost...
+                r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})'  # ...or ip
+                r'(?::\d+)?'  # optional port
+                r'(?:/?|[/?]\S+)$', re.IGNORECASE)
+            return pattern.match(url) is not None
+        except:
+            return True  # If validation fails, assume URL is valid
+    
     scrape_type = st.selectbox("Content Type", [
         "News Articles",
         "Social Media Posts", 
@@ -209,7 +224,7 @@ def show_web_scraper():
     ])
     
     if st.button("🕷️ Start Scraping"):
-        if url:
+        if url and is_valid_url(url):
             with st.spinner("Scraping in progress..."):
                 time.sleep(2)  # Simulate scraping
             st.success(f"✅ Successfully scraped content from {url}")
@@ -222,6 +237,10 @@ def show_web_scraper():
                 "Timestamp": ["2025-09-01 10:30", "2025-09-01 11:45"]
             }
             st.dataframe(pd.DataFrame(sample_data))
+        elif url:
+            st.error("❌ Please enter a valid URL starting with http:// or https://")
+        else:
+            st.warning("⚠️ Please enter a URL to scrape")
 
 def show_evidence_manager():
     st.header("⚖️ Legal Evidence Manager")
