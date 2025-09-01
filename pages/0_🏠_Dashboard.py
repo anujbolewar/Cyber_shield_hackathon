@@ -169,18 +169,19 @@ st.markdown("""
         padding: 1.5rem;
         text-align: center;
         box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        color: #000000;
     }
     
     .stat-number {
         font-size: 32px;
         font-weight: 700;
-        color: var(--gov-blue);
+        color: #000000;
         margin-bottom: 0.5rem;
     }
     
     .stat-label {
         font-size: 14px;
-        color: var(--gov-gray);
+        color: #000000;
         font-weight: 500;
     }
     

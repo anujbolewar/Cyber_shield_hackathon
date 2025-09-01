@@ -120,6 +120,22 @@ st.markdown("""
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         transition: all 0.3s ease;
         margin: 1rem 0;
+        color: #000000;
+    }
+    
+    .metric-card h3 {
+        color: #000000;
+        margin-bottom: 0.5rem;
+    }
+    
+    .metric-card h2 {
+        color: #000000;
+        margin: 0.5rem 0;
+    }
+    
+    .metric-card p {
+        color: #000000;
+        margin-bottom: 0;
     }
     
     .metric-card:hover {
