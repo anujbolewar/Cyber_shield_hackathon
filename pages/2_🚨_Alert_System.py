@@ -4,10 +4,29 @@ import plotly.express as px
 import plotly.graph_objects as go
 from datetime import datetime, timedelta
 import time
-from utils.alerts import AlertManager, AlertRule
-from utils.notifications import send_notification
-from utils.alerts import AlertManager, AlertRule
-from utils.notifications import send_notification
+
+# Handle missing utils gracefully
+try:
+    from utils.alerts import AlertManager, AlertRule
+    from utils.notifications import send_notification
+    UTILS_AVAILABLE = True
+except ImportError:
+    UTILS_AVAILABLE = False
+    # Fallback implementations
+    class AlertManager:
+        def __init__(self):
+            pass
+        def get_alerts(self):
+            return []
+        def add_alert(self, *args, **kwargs):
+            return True
+    
+    class AlertRule:
+        def __init__(self, *args, **kwargs):
+            pass
+    
+    def send_notification(*args, **kwargs):
+        return {"success": False, "message": "Demo mode - notifications not available"}
 
 st.set_page_config(
     page_title="Alert System - Police AI Monitor",
