@@ -4,8 +4,92 @@ import json
 import time
 from datetime import datetime, timedelta
 import random
-from utils.api_manager import APITester, APIKeyValidator, get_api_setup_links
-from utils.demo_keys import DemoKeyManager, get_demo_key_instructions, get_production_key_instructions
+
+# Self-contained API Management without external dependencies
+try:
+    from utils.api_manager import APITester, APIKeyValidator, get_api_setup_links
+    UTILS_AVAILABLE = True
+except ImportError:
+    UTILS_AVAILABLE = False
+
+try:
+    from utils.demo_keys import DemoKeyManager, get_demo_key_instructions, get_production_key_instructions
+    DEMO_KEYS_AVAILABLE = True
+except ImportError:
+    DEMO_KEYS_AVAILABLE = False
+
+# Fallback implementations when utils are not available
+if not UTILS_AVAILABLE:
+    class APITester:
+        @staticmethod
+        def test_openai_api(api_key):
+            return {"success": False, "message": "Demo mode - API testing not available"}
+        
+        @staticmethod
+        def test_twitter_api(api_key):
+            return {"success": False, "message": "Demo mode - API testing not available"}
+        
+        @staticmethod
+        def test_facebook_api(api_key):
+            return {"success": False, "message": "Demo mode - API testing not available"}
+        
+        @staticmethod
+        def test_telegram_api(api_key):
+            return {"success": False, "message": "Demo mode - API testing not available"}
+        
+        @staticmethod
+        def test_news_api(api_key):
+            return {"success": False, "message": "Demo mode - API testing not available"}
+        
+        @staticmethod
+        def test_reddit_api(api_key):
+            return {"success": False, "message": "Demo mode - API testing not available"}
+        
+        @staticmethod
+        def test_youtube_api(api_key):
+            return {"success": False, "message": "Demo mode - API testing not available"}
+    
+    class APIKeyValidator:
+        @staticmethod
+        def validate_openai_key(api_key):
+            return True, "Demo mode - validation not available"
+        
+        @staticmethod
+        def validate_twitter_token(api_key):
+            return True, "Demo mode - validation not available"
+        
+        @staticmethod
+        def validate_facebook_token(api_key):
+            return True, "Demo mode - validation not available"
+        
+        @staticmethod
+        def validate_telegram_token(api_key):
+            return True, "Demo mode - validation not available"
+    
+    def get_api_setup_links():
+        return {
+            "OpenAI": "https://platform.openai.com/api-keys",
+            "Twitter": "https://developer.twitter.com/",
+            "Facebook": "https://developers.facebook.com/",
+            "Telegram": "https://core.telegram.org/bots#creating-a-new-bot",
+            "News API": "https://newsapi.org/",
+            "Reddit": "https://www.reddit.com/prefs/apps",
+            "YouTube": "https://console.cloud.google.com/"
+        }
+
+if not DEMO_KEYS_AVAILABLE:
+    class DemoKeyManager:
+        def __init__(self):
+            pass
+        
+        def get_demo_keys(self):
+            return {}
+    
+    def get_demo_key_instructions():
+        return "Demo mode - instructions not available"
+    
+    def get_production_key_instructions():
+        return "Demo mode - instructions not available"
 
 st.set_page_config(
     page_title="API Management - Police AI Monitor",
