@@ -86,10 +86,39 @@ if not DEMO_KEYS_AVAILABLE:
             return {}
     
     def get_demo_key_instructions():
-        return "Demo mode - instructions not available"
+        return {
+            "title": "Demo Mode - API Keys",
+            "description": "This is a demonstration mode. Real API functionality is not available.",
+            "benefits": [
+                "Safe testing environment",
+                "No real API calls made",
+                "All features available for demonstration"
+            ],
+            "platforms": {
+                "OpenAI": {"name": "OpenAI GPT", "demo_key": "demo_openai_key_123"},
+                "Twitter": {"name": "Twitter/X API", "demo_key": "demo_twitter_key_123"},
+                "Facebook": {"name": "Facebook Graph API", "demo_key": "demo_facebook_key_123"},
+                "Telegram": {"name": "Telegram Bot API", "demo_key": "demo_telegram_key_123"},
+                "News API": {"name": "News API", "demo_key": "demo_news_key_123"},
+                "Reddit": {"name": "Reddit API", "demo_key": "demo_reddit_key_123"},
+                "YouTube": {"name": "YouTube Data API", "demo_key": "demo_youtube_key_123"}
+            }
+        }
     
     def get_production_key_instructions():
-        return "Demo mode - instructions not available"
+        return {
+            "title": "Production API Setup",
+            "description": "Instructions for setting up real API keys in production environment.",
+            "setup_links": {
+                "OpenAI": "https://platform.openai.com/api-keys",
+                "Twitter": "https://developer.twitter.com/",
+                "Facebook": "https://developers.facebook.com/",
+                "Telegram": "https://core.telegram.org/bots#creating-a-new-bot",
+                "News API": "https://newsapi.org/",
+                "Reddit": "https://www.reddit.com/prefs/apps",
+                "YouTube": "https://console.cloud.google.com/"
+            }
+        }
 
 st.set_page_config(
     page_title="API Management - Police AI Monitor",
