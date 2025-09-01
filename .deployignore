@@ -1,0 +1,38 @@
+# Deployment configurations
+.env
+*.env
+.env.local
+.env.production
+
+# AWS specific
+.aws/
+*.pem
+
+# GCP specific
+gcp-credentials.json
+service-account-key.json
+
+# Azure specific
+azure-credentials.json
+
+# Docker
+.dockerignore
+
+# Local development
+.vscode/
+.idea/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.log
+
+# Data files
+*.db
+*.sqlite
+*.sqlite3
+
+# Backup files
+*.bak
+*.backup
