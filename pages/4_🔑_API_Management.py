@@ -84,6 +84,14 @@ if not DEMO_KEYS_AVAILABLE:
         
         def get_demo_keys(self):
             return {}
+        
+        def is_demo_key(self, key):
+            """Check if a key is a demo key"""
+            if not key:
+                return False
+            # Demo keys typically start with 'demo_' or are placeholder keys
+            demo_patterns = ['demo_', 'sk-demo', 'test_', 'sample_', 'placeholder']
+            return any(str(key).lower().startswith(pattern) for pattern in demo_patterns)
     
     def get_demo_key_instructions():
         return {
