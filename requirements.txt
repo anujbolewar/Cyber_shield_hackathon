@@ -4,4 +4,6 @@ plotly
 numpy
 requests
 beautifulsoup4
+validators
+lxml
 python-dateutil
