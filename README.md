@@ -68,44 +68,36 @@ police-ai-monitor/
 ## Screenshots
 
 ### Login Screen
-![Login Screen](images/login.png)
-The application starts with a secure authentication system requiring authorized law enforcement personnel credentials. The interface features a professional police-themed design with proper security protocols.
+*Secure authentication system requiring authorized law enforcement personnel credentials. The interface features a professional police-themed design with proper security protocols.*
 
 ### Main Dashboard
-![Dashboard](images/dashboard.png)
-The main dashboard provides a comprehensive overview of all monitoring activities including system metrics, active alerts, intelligence reports, and system health indicators. Quick action buttons allow rapid access to key functions.
+*Comprehensive overview of all monitoring activities including system metrics, active alerts, intelligence reports, and system health indicators. Quick action buttons allow rapid access to key functions.*
 
 ### Real-Time Intelligence Feed
-![Real-Time Feed](images/realtime-feed.png)
-Live monitoring interface showing social media posts with sentiment analysis, engagement metrics, and threat classification. The system tracks multiple platforms simultaneously and provides detailed analytics for each post.
+*Live monitoring interface showing social media posts with sentiment analysis, engagement metrics, and threat classification. The system tracks multiple platforms simultaneously and provides detailed analytics for each post.*
 
 ### Alert Management System
-![Alert System](images/alerts.png)
-Advanced alert management showing active threats, alert trends over time, and critical notifications. The system provides real-time monitoring with customizable alert thresholds and response coordination tools.
+*Advanced alert management showing active threats, alert trends over time, and critical notifications. The system provides real-time monitoring with customizable alert thresholds and response coordination tools.*
 
 ### API Management Center
-![API Management](images/api-management.png)
-Comprehensive API configuration interface for managing external service connections. Features secure token management for social media platforms (Twitter/X, Facebook, Telegram, Reddit, YouTube), with encryption enabled and session-only storage. Includes demo mode for testing and quick setup guides for each platform.
+*Comprehensive API configuration interface for managing external service connections. Features secure token management for social media platforms (Twitter/X, Facebook, Telegram, Reddit, YouTube), with encryption enabled and session-only storage. Includes demo mode for testing and quick setup guides for each platform.*
 
 ### NLP Analysis Engine
-![NLP Analysis](images/nlp-analysis.png)
-Advanced Natural Language Processing engine with multi-language support, threat detection, and risk assessment capabilities. Provides AI-powered content analysis for threat detection and intelligence gathering with comprehensive analysis controls and history tracking.
+*Advanced Natural Language Processing engine with multi-language support, threat detection, and risk assessment capabilities. Provides AI-powered content analysis for threat detection and intelligence gathering with comprehensive analysis controls and history tracking.*
 
 ### Data Visualization & Analytics
-![Data Visualization](images/analytics1.png)
-Comprehensive threat assessment dashboard featuring real-time threat level gauges, risk score distribution analysis, and advanced monitoring metrics for law enforcement operations.
+*Comprehensive threat assessment dashboard featuring real-time threat level gauges, risk score distribution analysis, and advanced monitoring metrics for law enforcement operations.*
 
 ### Geographic Threat Analysis
-![Geographic Analysis](images/analytics2.png)
-Interactive map showing geographic distribution of threats across India, with platform-specific analytics and keyword frequency analysis for better situational awareness.
+*Interactive map showing geographic distribution of threats across India, with platform-specific analytics and keyword frequency analysis for better situational awareness.*
 
 ### Network Analysis
-![Network Analysis](images/network.png)
-Advanced network analysis showing account relationships and connection patterns. This helps identify bot networks, suspicious account clusters, and coordinated threat activities.
+*Advanced network analysis showing account relationships and connection patterns. This helps identify bot networks, suspicious account clusters, and coordinated threat activities.*
 
 ### Trend Analysis
-![Trend Analysis](images/trends.png)
-Detailed trend analysis showing threat activity over time, content volume patterns, and bot activity detection to help predict and prevent potential security incidents.
+*Detailed trend analysis showing threat activity over time, content volume patterns, and bot activity detection to help predict and prevent potential security incidents.*
+
+> **Note:** Screenshots will be added soon. The application is fully functional and can be tested by running `python run.py`.
 
 ## Demo Mode
 
